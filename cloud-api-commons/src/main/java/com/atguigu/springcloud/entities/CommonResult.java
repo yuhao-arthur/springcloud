@@ -4,17 +4,20 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @Author EiletXie
+ * @Since 2020/3/9 13:52
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class CommonResult<T> {
-    private  Integer code;
+    // 404 not found
+    private Integer code;
     private String message;
+    private T       data;
 
-    private T data;
-
-    public CommonResult(Integer code, String message) {
-        this.code = code;
-        this.message = message;
+    public CommonResult(Integer code,String message){
+        this(code,message,null);
     }
 }
