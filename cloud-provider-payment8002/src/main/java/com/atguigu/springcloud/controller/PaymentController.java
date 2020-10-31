@@ -59,7 +59,9 @@ public class PaymentController {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        System.out.println(123);
         return serverPort;
+
     }
 
 }
